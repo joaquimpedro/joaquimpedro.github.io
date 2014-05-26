@@ -1,3 +1,15 @@
-name: Your New Jekyll Site
-markdown: redcarpet
-pygments: true
+# Site settings
+title: Guilherme Falcão
+email: guilhermelfalcao@gmail.com
+description: "Development, general technology , and anything else that i want to write..."
+baseurl: ""
+url: "guilhermefalcao.github.io"
+
+#Social networks
+username: "guilhermefalcao" #Refatorar, deverá ter uma variável dedicada ao github
+twitter: "xGuiZiN"
+linkedin: "guilhermefalcao"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
