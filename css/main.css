@@ -39,10 +39,6 @@ a:visited { color: #a0a; }
   margin-bottom: 2em;
 }
 
-.feed {
-    max-width: 500px;
-}
-
 .posts li {
   line-height: 1.75em;
 }

@@ -1,71 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Joaquim Pedro</title>
-        <meta name="viewport" content="width=device-width">
+        <meta charset='utf-8'>
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/stylesheet.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/pygment_trac.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/print.css" media="print" />
+        <script src="http://code.jquery.com/jquery-1.9.0.js"></script>
+        <script src="/js/semantic.js" ></script>
+        <link rel="stylesheet" type="text/css" href="/css/semantic.css"/>
+        <script src="/js/footer.js"></script>
 
-        <!-- syntax highlighting CSS -->
-        <link rel="stylesheet" href="/css/syntax.css">
+        <!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="/css/main.css">
-        
-        <!-- Semantic CSS -->
-        <link rel="stylesheet" href="/css/semantic.css">
-        
-        <!-- Semantic JS -->
-        <script src="/js/semantic.js"></script>
-
+        <title>Joaquimpedro.github.io by joaquimpedro</title>
     </head>
     <body>
 
         <div class="site">
             
-            <div class="ui inverted teal pointing menu">
-                <div class="header item"> Kindas </div>
-                <div class="right menu">
-                    <div class="ui top right pointing mobile dropdown link item">
-                        Menu
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a class="item">Classes</a>
-                            <a class="item">Cocktail Hours</a>
-                            <a class="item">Community</a>
-                        </div>
+            <header>
+                <div class="inner">
+                    <h1>Joaquimpedro.github.io</h1>
+                    <h2></h2>
+                    <a href="https://github.com/joaquimpedro" class="button"><small>Follow me on</small>GitHub</a>
+                    <div class="ui menu secondary pointing">
+                        <a href="/" class="item"> <i class="home icon"></i> Home</a>
+                        <a class="item">Teste</a>
+                        <a class="item">Teste</a>
+                        <a class="item">Teste</a>
+                        <a class="item">Teste</a>
                     </div>
-                    <div class="ui dropdown link item">
-                        Courses
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a class="item">Petting</a>
-                            <a class="item">Feeding</a>
-                            <a class="item">Mind Reading</a>
+                </div>
+            </header>
+            
+            <div id="content-wrapper">
+                <div class="inner clearfix">
+                    <section id="main-content">
+                        {{ content }}
+                    </section>
+                    <aside id="sidebar">
+                        <div class="ui list">
+                            {% for post in site.posts limit: 2 %}
+                            <div class="item">
+                                <i class="terminal icon"></i>
+                                <div class="content">
+                                    <a href="{{ post.url }}" class="header">{{ post.title }}</a>
+                                    <div class="description">  {{ post.description }} ...</div>
+                                </div>
+                            </div>
+                            {% endfor %}
                         </div>
-                    </div>
-                    <a class="item">Library</a>
-                    <a class="item">Community</a>
-                    <a class="item" href="promocoes"> <i class="sign in icon"></i> Login</a>
+                    </aside>
                 </div>
             </div>
 
-            {{ content }}
-
             <div class="footer">
-                <div class="contact">
-                    <p>
-                        Joaquim Pedro s<br />
-                        What You Are<br />
-                        pedro.quindin@gmail.com
-                    </p>
-                </div>
-                <div class="contact">
-                    <p>
-                        <a href="https://github.com/joaquimpedro">github.com/joaquimpedro</a><br />
-                        <a href="https://twitter.com/quindin">twitter.com/quindin</a><br />
-                    </p>
-                </div>
+                {% include footer.html %}
             </div>
         </div>
 
